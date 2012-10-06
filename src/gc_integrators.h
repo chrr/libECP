@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #ifndef GC_INTEGRATORS_H
 #define GC_INTEGRATORS_H

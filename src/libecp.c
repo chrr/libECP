@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #include <math.h>
 
@@ -11,8 +12,6 @@
 #include "dimensions.h"
 #include "transformations.h"
 #include "gc_integrators.h"
-
-#include <stdio.h>
 
 
 struct _libECPHandle {

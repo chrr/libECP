@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #include <math.h>
 

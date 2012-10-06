@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #ifndef _BESSEL_H
 #define _BESSEL_H 1

@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #ifndef SPHERICAL_HARMONICS_H
 #define SPHERICAL_HARMONICS_H 1

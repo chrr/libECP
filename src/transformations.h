@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #ifndef TRANSFORMATIONS_H
 #define TRANSFORMATIONS_H 1

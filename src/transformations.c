@@ -1,11 +1,11 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #include "transformations.h"
 #include "dimensions.h"
-#include "factorial.h"
+#include "util.h"
 
 #include <stdlib.h>
 #include <math.h>
-#include <stdio.h>
 
 /* transformation matrices in this file are - in principle - 5 dimensional,
    but in practice reduce to 2 dimensions:

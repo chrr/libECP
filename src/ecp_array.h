@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #ifndef ECP_ARRAY_H
 #define ECP_ARRAY_H 1

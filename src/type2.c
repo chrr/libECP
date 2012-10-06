@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #include <stdlib.h>
 #include <math.h>
@@ -5,7 +6,6 @@
 #include "type2.h"
 #include "util.h"
 #include "dimensions.h"
-#include "factorial.h"
 #include "transformations.h"
 #include "angular_integrals.h"
 

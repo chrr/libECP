@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #ifndef ANGULAR_INTEGRAL_H
 #define ANGULAR_INTEGRAL_H 1

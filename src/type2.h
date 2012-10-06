@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #ifndef TYPE2_H
 #define TYPE2_H 1

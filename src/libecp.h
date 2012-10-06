@@ -1,3 +1,4 @@
+/* Copyright (c) 2012, Christoph Reimann */
 
 #ifndef LIBECP_H
 #define LIBECP_H 1

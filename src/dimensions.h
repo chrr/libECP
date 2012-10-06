@@ -1,4 +1,4 @@
-  
+/* Copyright (c) 2012, Christoph Reimann */  
  
 /* change the following macros if orbitals are to be arranged in a different order */
 #define L_QN(l) (l)
