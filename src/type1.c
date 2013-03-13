@@ -92,6 +92,7 @@ QIntegrand(double r, unsigned int index, const QIntegrandParameters *p) {
    by integration over primitive Gaussian functions */
 doubleArray
 calcQ(Type1 *t1, double *U_L, ECP *U, const double s, const int lab, 
+      /* FIXME - shifta, shiftb unused */
       const double dAC, double ca, const double za, const double shifta,
       const double dBC, double cb, const double zb, const double shiftb) {
   GCIntegrationTable *grid;
@@ -295,7 +296,6 @@ calcChi(Type1 *t1, double *U_L, ECP *U,
     }
   }
 
-  return calcPolynomials(chi, t1->ijk, t1->ijkIndex, t1->ijkDim,
-			 t1->fac, t1->accuracy, 4.0*M_PI, la, uspA, lb, uspB);
+  return chi;
 }
 

@@ -265,7 +265,6 @@ calcPolynomials(doubleArray gamma, const int *ijk, const int *ijkIndex, const in
   doubleArray I = doubleArray_new(2, IJK_DIM(la), IJK_DIM(lb));
   const int incJ = J.dim[2];
   const int incI = I.dim[2];
-  int idx;
 
   /* a) sums over alpha_x,y,z */
   for(c1=0; c1<IJK_DIM(la); c1++) {
@@ -300,7 +299,6 @@ calcPolynomials(doubleArray gamma, const int *ijk, const int *ijkIndex, const in
   }
 
   /* b) sums over beta_x,y,z */
-  idx = 0;
   for(c2=0; c2<IJK_DIM(lb); c2++) {
     q = CIJK_INDEX(lb,c2);
     bx = ijk[q];
@@ -317,7 +315,6 @@ calcPolynomials(doubleArray gamma, const int *ijk, const int *ijkIndex, const in
 	  dbz = bz - beta_z;
 
 	  factor = bin_bz*uspB.array[dbx*incB2 + dby*incB1 + dbz];
-	  idx++;
 	  if (fabs(factor) <= tol)
 	    continue;
 

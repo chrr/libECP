@@ -5,14 +5,20 @@
 
 typedef struct _libECPHandle libECPHandle; 
 
-typedef void (*ECPCallback)(int A, int sa, int la, int shifta, 
-			    int B, int sb, int lb, int shiftb,
-			    int C, double *I, void *p);
+typedef void (*ECPCallback)(int A, int B, int C, 
+			    int sa, int sb, 
+			    int la, int lb, 
+			    int shifta, int shiftb,
+			    double *I, void *p);
 
+/* create libECP handle and initialize type1 and type2 integrations */
 libECPHandle * libECP_init(int nrAtoms, double *geometry, 
-			   int *shellsECP, int *contractionECP, int *lECP, double *nECP, double *dECP, double *aECP, 
-			   int *shells, int *am, int *contraction, double *d, double *a, 
-			   int derivative, int *shellOrdering, const int lmax);
+			   int *shellsECP, int *KECP, 
+			   int *lECP, double *nECP, double *dECP, double *aECP, 
+			   int *shellsBS, int *lBS, int *KBS, 
+			   double *dBS, double *aBS, 
+			   int n, int lmax, int *shellOrdering, 
+			   int largeGridOrder, double tolerance,  double accuracy);
 
 /* check return value:
    0 - successful integration

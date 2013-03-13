@@ -2,7 +2,7 @@
 MODULES := src
 
 # look for include files in each of the modules
-CFLAGS += $(patsubst %,-I%,$(MODULES)) -Werror -fPIC -Wall -O3
+CFLAGS += $(patsubst %,-I%,$(MODULES)) -Werror -fPIC -Wall -g
 
 # extra libraries if required
 LIBS := -lm

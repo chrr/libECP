@@ -38,6 +38,7 @@ doubleArray unitarySpherePolynomials(const int l, double *r);
 
 doubleArray calcPolynomials(doubleArray gamma, const int *ijk, const int *ijkIndex, const int ijkDim, 
 			    double *fac, const double tol, const double N, 
-			    const int la, doubleArray uspA, const int lb, doubleArray uspB);
+			    const int la, doubleArray uspA, 
+			    const int lb, doubleArray uspB);
 
 #endif

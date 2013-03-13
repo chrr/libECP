@@ -58,6 +58,8 @@ Type2_new(const int nrAtoms, double *geometry, ECP **U,
   t2->accuracy = 1.0E-14;
   t2->lnAccuracy = log(t2->accuracy)-2;
   t2->smallOrder = 128;
+  /* setting largeOrder here is obsolete - 
+     only keep it for reference */
   t2->largeOrder = 1024;
   /* tolerance in quadrature for radial integrals (FM06: 1.0E-8) */
   t2->tolerance = tol;
@@ -88,6 +90,7 @@ Type2_init(Type2 *t2, double *fac, double *dfac, int *ijk, int *ijkIndex, const 
   t2->smallGrid = initGridGC_PS93(t2->smallOrder, t2->tolerance);  
   /* transform small grid from (-1,+1) to (0,\infty) */
   transformGrid_KK(t2->smallGrid->order, t2->smallGrid->x, t2->smallGrid->w);
+  t2->largeOrder = largeGrid->order;
   t2->largeGrid = largeGrid;
   t2->bessel = bessel;
 }
@@ -281,7 +284,7 @@ calcF_FM06(Type2 *t2, double *rC, ScreenedGrid **screening) {
 	  zeta = t2->a[offset];
 	  da = t2->d[offset];
 
-	  /* in case of derivatives: need d^n */
+	  /* in case of derivatives: need a^n */
 	  for(n=0; n<order; n++)
 	    da *= zeta;
 	  
@@ -621,8 +624,9 @@ calcGamma(Type2 *t2, doubleArray F, doubleArray UTab, ECP *U, const double dAC, 
     doubleArray_free(T);  
   }
   
+  return gamma;
   /* 2. transform polynomials into local coordinate system */
-  return calcPolynomials(gamma, t2->ijk, t2->ijkIndex, t2->ijkDim,
-			 t2->fac, t2->accuracy, 16.0*M_PI*M_PI, la, uspA, lb, uspB);
+  //return calcPolynomials(gamma, t2->ijk, t2->ijkIndex, t2->ijkDim,
+  // t2->fac, t2->accuracy, 16.0*M_PI*M_PI, la, uspA, lb, uspB);
 }
 
