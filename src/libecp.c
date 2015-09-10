@@ -1,5 +1,7 @@
 /* Copyright (c) 2012, Christoph Reimann */
 
+#include <stdio.h>
+
 #include <math.h>
 
 #include "ecp.h"
@@ -343,6 +345,7 @@ calculateECPIntegrals(libECPHandle *h, ECPCallback cb, void *args) {
 		  las = la + shifta;
 		  lbs = lb + shiftb;
 		  if (1==t) { /* type 1 */ 
+		    //printf("A=%d,%d  B=%d,%d\n", A, s1, B, s2);
 		    I = calcChi(t1, U_L, U[C], rAC, dAC, rBC, dBC,
 				las, sIdx1, pIdx1, shifta, uspA,
 				lbs, sIdx2, pIdx2, shiftb, uspB);

@@ -32,3 +32,9 @@ clean:
 	gcc -MM -MG -MT $(patsubst %.dep,%.o,$@) $(CFLAGS) $< > $@
 # C include dependencies
 include $(OBJ:.o=.dep)
+
+# example code
+example/ex1: example/ex1.c
+	gcc -g -O0 -Isrc/ $< -o $@ libecp.a -lm
+
+all: $(LIBECP) example/ex1

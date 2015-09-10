@@ -108,7 +108,7 @@ sphericalCoordinates (double *cartesian, double *spherical) {
 
 double
 distance(double *A, double *B) {
-  double x,y,z;
+  double x, y, z;
   x = A[0]-B[0];
   y = A[1]-B[1];
   z = A[2]-B[2];

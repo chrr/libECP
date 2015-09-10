@@ -10,6 +10,7 @@ libecp_SRC =	ecp.c\
 		bessel.c\
 		gc_integrators.c\
 		ecp_array.c\
-		libecp.c
+		libecp.c\
+		getIntegrals.c
 
 SRC += $(patsubst %, src/%, $(libecp_SRC)) 

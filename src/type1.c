@@ -10,6 +10,7 @@
 #include "spherical_harmonics.h"
 #include "util.h"
 
+#include <stdio.h>
 
 Type1 *
 Type1_new(int nrAtoms, double *geometry, ECP **U, 
@@ -285,6 +286,7 @@ calcChi(Type1 *t1, double *U_L, ECP *U,
 		    }
 		    chi.array[i*inc+j] += factor * Q.array[lmax*incQ+l];
 		  }
+		  //printf(" libecp type1:  %d,%d  %d,%d  chi[%d,%d,%d][%d,%d,%d] = %.12f\n", la, lb, pa, pb, ax, ay, az, bx, by, bz, chi.array[i*inc+j]);
 		}
 	      }
 	    }
